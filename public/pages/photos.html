@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAT DUNN</title>
+    <link rel="stylesheet" href="../Styles/normalize.css" />
+    <link rel="stylesheet" href="../Styles/main.css" />
+  </head>
+  <header>
+    <h1>Photos</h1>
+    <nav id="nav_menu">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./photos.html">Photos</a></li>
+        <li><a href="./videos.html">Videos</a></li>
+        <li><a href="./resume.html">Resume</a></li>
+        <li><a href="./taggedphotos.html">Tagged Photos</a></li>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <!-- proceedurely add images based on what is in folder -->
+        <img src="../src/images/img1.jpg" style="width: 100%" />
+        <div class="text"></div>
+      </div>
+      <div class="mySlides fade">
+        <img src="../src/images/img2.jpg" style="width: 100%" />
+        <div class="text"></div>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+    <div style="text-align: center">
+      <!-- add these dots based on the amount of images that are here -->
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </body>
+</html>
