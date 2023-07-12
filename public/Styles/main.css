@@ -65,6 +65,46 @@ p{
 #nav_menu ul li :hover {
     background-color: #13293d;
 }
+	#nav_menu ul ul {
+		display: none;
+		position: absolute;
+		top: 100%;
+		width: 100%;
+	}
+	#nav_menu ul ul li a {
+		padding: .5em;
+	
+	}
+	#nav_menu ul ul li {
+		float: none;
+	
+	}
+
+	/* Sub nav */
+	.subnav-content {
+		display: none;
+		position: absolute;
+		left: 0;
+		background-color: navy;
+		width: 100%;
+		z-index: 1;
+	  }
+	  
+	  .subnav-content a {
+		float: left;
+		color: white;
+		text-decoration: none;
+	  }
+	  
+	  .subnav-content a:hover {
+		background-color: #eee;
+		color: green;
+	  }
+	  
+	  .subnav:hover .subnav-content {
+		display: block;
+	  }
+	
 #dev7link {
     position:absolute;
     top:0;
@@ -101,8 +141,35 @@ p{
 	width: 100%;
 	border-radius: 25px;
 	max-height:600px;
-	height: 100%;
 }
+
+img{
+	height:50%;
+	width:50%
+}
+.photo-set{
+	font-size: medium;
+}
+.row {
+	display: flex;
+	padding: 0 4px;
+
+  }
+  
+  /* Create two equal columns that sits next to each other */
+  .column {
+	/* flex: 50%; */
+	display:flex;
+	flex-wrap: wrap;
+	flex-direction: row-reverse;
+	align-content: stretch;
+	padding: 0 4px;
+  }
+  
+  .column img {
+	margin-top: 8px;
+	vertical-align: middle;
+  }
 /* mobile landscape to tablet portrait */
 @media only screen and (max-width: 767px) {
 
