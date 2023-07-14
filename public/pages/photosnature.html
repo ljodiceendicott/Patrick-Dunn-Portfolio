@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAT DUNN</title>
+    <link rel="stylesheet" href="../Styles/normalize.css" />
+    <link rel="stylesheet" href="../Styles/main.css" />
+  </head>
+  <header>
+    <h1>Photos</h1>
+    <div class="nav_menu">
+      <a href="../index.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn" href="photos.html">Photos 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="photoscreativelighting.html">Creative Lighting</a>
+          <a href="photosnature.html">Nature</a>
+          <a href="photossports.html">Sports</a>
+          <a href="photostravel.html">Travel</a>
+        </div>
+      </div> 
+      <div class="dropdown">
+        <button class="dropbtn" href="photos.html">Videos
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Endicott College</a>
+          <a href="#">Boston University</a>
+        </div>
+      </div> 
+      <a href="taggedphotos.html">Tagged Photos</a>
+      <a href="resume.html">Resume</a>
+    </div>
+  </header>
+  <body>
+      <div class="slideshow-container">
+        <h1 style="text-align: center; padding-bottom: 20px">
+          <a
+            href="./photoscreativelighting.html"
+            style="text-decoration: none; color: green"
+            >Nature</a
+          >
+        </h1>
+          <div>
+              <div class="mySlidesNature fade">
+              <img src="../src/images/Nature/DSCN0264.JPG" style="width: 50%; height: 50%; margin-left: 25%"/>
+              </div>
+              <div class="mySlidesNature fade">
+              <img src="../src/images/Nature/DSCN0338.JPG" style="width: 50%; height: 50%; margin-left: 25%"/>
+              </div>
+              <div class="mySlidesNature fade">
+              <img src="../src/images/Nature/DSCN0578.JPG" style="width: 50%; height: 50%; margin-left: 25%"/>
+              </div>
+              <div class="mySlidesNature fade">
+              <img src="../src/images/Nature/DSCN0789.JPG" style="width: 50%; height: 50%; margin-left: 25%"/>
+              </div>
+              <div class="mySlidesNature fade">
+              <img src="../src/images/Nature/DSCN1581.JPG" style="width: 50%; height: 50%; margin-left: 25%"/>
+              </div>
+              <div class="mySlidesNature fade">
+              <img src="../src/images/Nature/DSCN1739.JPG" style="width: 50%; height: 50%; margin-left: 25%"/>
+              </div>
+              <div class="mySlidesNature fade">
+              <img src="../src/images/Nature/DSCN2148.JPG" style="width: 50%; height: 50%; margin-left: 25%"/>
+              </div>
+              <div class="mySlidesNature fade">
+              <img src="../src/images/Nature/DSCN2148.JPG" style="width: 50%; height: 50%; margin-left: 25%"/>
+              </div>
+              <div class="mySlidesNature fade">
+              <img src="../src/images/Nature/DSCN4049.JPG" style="width: 50%; height: 50%; margin-left: 25%"/>
+              </div>
+              <div class="mySlidesNature fade">
+              <img src="../src/images/Nature/DSCN4088.JPG" style="width: 50%; height: 50%; margin-left: 25%"/>
+              </div>
+              <div class="mySlidesNature fade">
+              <img src="../src/images/Nature/DSCN4092.JPG" style="width: 50%; height: 50%; margin-left: 25%"/>
+              </div>
+              <div class="mySlidesNature fade">
+              <img src="../src/images/Nature/DSCN4304.JPG" style="width: 50%; height: 50%; margin-left: 25%"/>
+              </div>
+              <div class="mySlidesNature fade">
+              <img src="../src/images/Nature/DSCN5405.JPG" style="width: 50%; height: 50%; margin-left: 25%"/>
+              </div>
+              <div class="mySlidesNature fade">
+              <img src="../src/images/Nature/DSCN5428.JPG" style="width: 50%; height: 50%; margin-left: 25%"/>
+              </div>
+              <div class="mySlidesNature fade">
+              <img src="../src/images/Nature/DSCN6816.JPG" style="width: 50%; height: 50%; margin-left: 25%"/>
+              </div>
+      
+              <a class="prev" onclick="plusSlidesNature(-1)">&#10094;</a>
+           <a class="next" onclick="plusSlidesNature(1)">&#10095;</a>
+    </div>
+    <br />
+    <div style="text-align: center">
+      <!-- add these dots based on the amount of images that are here -->
+      <span class="naturedot" onclick="currentSlideNature(1)"></span>
+      <span class="naturedot" onclick="currentSlideNature(2)"></span>
+    </div>
+    </div>
+    <script>
+      var slideIndexNature = 1;
+      showSlidesNature(slideIndexNature);
+      function plusSlidesNature(n) {
+        showSlidesNature((slideIndexNature += n));
+      }
+      function currentSlideNature(n) {
+        showSlidesNature((slideIndexNature = n));
+      }
+      function showSlidesNature(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlidesNature");
+        var naturedots = document.getElementsByClassName("naturedot");
+        if (n > slides.length) {
+          slideIndexNature = 1;
+        }
+        if (n < 1) {
+          slideIndexNature = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < naturedots.length; i++) {
+          naturedots[i].className = naturedots[i].className.replace(" active", "");
+        }
+        slides[slideIndexNature - 1].style.display = "block";
+        naturedots[slideIndexNature - 1].className += " active";
+      }
+    </script>
+
+      <div class="row">
+        <div class="column">
+          <img src="../src/images/Nature/DSCN0264.JPG" style="width: 100%; margin-top: -89%" />
+          <img src="../src/images/Nature/DSCN0338.JPG" style="width: 100%; margin-top: -12%" />
+          <img src="../src/images/Nature/DSCN0578.JPG" style="width: 100%" />
+          <img src="../src/images/Nature/DSCN0789.JPG" style="width: 100%" />
+          <img src="../src/images/Nature/DSCN1581.JPG" style="width: 100%" />
+          <img src="../src/images/Nature/DSCN1739.JPG" style="width: 100%" />
+          <img src="../src/images/Nature/DSCN4049.JPG" style="width: 100%" />
+        </div>
+        <div class="column">
+          <img src="../src/images/Nature/DSCN4304.JPG" style="width: 100%; margin-top:24%" />
+          <img src="../src/images/Nature/DSCN5405.JPG" style="width: 100%" />
+          <img src="../src/images/Nature/DSCN5428.JPG" style="width: 100%" />
+          <img src="../src/images/Nature/DSCN6816.JPG" style="width: 100%" />
+          <img src="../src/images/Nature/DSCN4088.JPG" style="width: 100%" />
+          <img src="../src/images/Nature/DSCN4092.JPG" style="width: 100%" />
+          <img src="../src/images/Nature/DSCN2148.JPG" style="width: 100%" />
+          <img src="../src/images/Nature/DSCN2148.JPG" style="width: 100%" />
+
+        </div>
+      </div>
+    </div>
+
+    <div></div>
+  </body>
+</html>

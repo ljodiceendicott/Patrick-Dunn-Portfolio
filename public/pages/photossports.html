@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAT DUNN</title>
+    <link rel="stylesheet" href="../Styles/normalize.css" />
+    <link rel="stylesheet" href="../Styles/main.css" />
+  </head>
+  <header>
+    <h1>Photos</h1>
+    <div class="nav_menu">
+      <a href="../index.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn" href="photos.html">
+          Photos
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="photoscreativelighting.html">Creative Lighting</a>
+          <a href="photosnature.html">Nature</a>
+          <a href="photossports.html">Sports</a>
+          <a href="photostravel.html">Travel</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn" href="photos.html">
+          Videos
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Endicott College</a>
+          <a href="#">Boston University</a>
+        </div>
+      </div>
+      <a href="taggedphotos.html">Tagged Photos</a>
+      <a href="resume.html">Resume</a>
+    </div>
+  </header>
+  <body>
+    <div class="slideshow-container">
+      <h1 style="text-align: center; padding-bottom: 20px">
+        <a
+          href="./photossports.html"
+          style="text-decoration: none; color: green"
+          >Sports</a
+        >
+      </h1>
+      <div class="mySlides fade">
+        <img
+          src="../src/images/Sports/CG5A7224.jpg"
+          style="width: 50%; height: 50%; margin-left: 25%" />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="../src/images/Sports/CG5A7328.JPG"
+          style="width: 50%; height: 50%; margin-left: 25%" />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="../src/images/Sports/CG5A7339.JPG"
+          style="width: 50%; height: 50%; margin-left: 25%" />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="../src/images/Sports/CG5A7459.JPG"
+          style="width: 50%; height: 50%; margin-left: 25%" />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="../src/images/Sports/CG5A8774.jpg"
+          style="width: 50%; height: 50%; margin-left: 25%" />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="../src/images/Sports/CG5A8943.jpg"
+          style="width: 50%; height: 50%; margin-left: 25%" />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="../src/images/Sports/CG5A9629.jpg"
+          style="width: 50%; height: 50%; margin-left: 25%" />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="../src/images/Sports/DSC03078.jpg"
+          style="width: 50%; height: 50%; margin-left: 25%" />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="../src/images/Sports/DSC03145.jpg"
+          style="width: 50%; height: 50%; margin-left: 25%" />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="../src/images/Sports/DSC03183.jpg"
+          style="width: 50%; height: 50%; margin-left: 25%" />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="../src/images/Sports/DSC03340.jpg"
+          style="width: 50%; height: 50%; margin-left: 25%" />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="../src/images/Sports/DSC03348.jpg"
+          style="width: 50%; height: 50%; margin-left: 25%" />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="../src/images/Sports/DSC03352.jpg"
+          style="width: 50%; height: 50%; margin-left: 25%" />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="../src/images/Sports/DSC03432.jpg"
+          style="width: 50%; height: 50%; margin-left: 25%" />
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+    <div style="text-align: center">
+      <!-- add these dots based on the amount of images that are here -->
+      <!-- <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span> -->
+    </div>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+
+    <div id="photo-set">
+      <div class="row">
+        <div class="column">
+          <!-- <img src="../src/images/Sports/CG5A0008.CR2" />
+        <img src="../src/images/Sports/CG5A0132.CR2" /> -->
+          <img src="../src/images/Sports/CG5A7224.jpg" style="width: 100%" />
+          <img src="../src/images/Sports/CG5A7328.JPG" style="width: 100%" />
+          <img src="../src/images/Sports/CG5A7339.JPG" style="width: 100%" />
+          <img src="../src/images/Sports/CG5A7459.JPG" style="width: 100%" />
+          <img src="../src/images/Sports/CG5A8774.jpg" style="width: 100%" />
+          <img src="../src/images/Sports/CG5A8943.jpg" style="width: 100%" />
+          <img src="../src/images/Sports/CG5A9629.jpg" style="width: 100%" />
+        </div>
+        <div class="column">
+          <img
+            src="../src/images/Sports/DSC03078.jpg"
+            style="width: 100%; margin-top: -132.5%" />
+          <img
+            src="../src/images/Sports/DSC03145.jpg"
+            style="margin-top: -64%; width: 100%; margin-bottom: 66%" />
+          <img
+            src="../src/images/Sports/DSC03183.jpg"
+            style="margin-top: -64%; width: 100%; margin-bottom: 66%" />
+          <img
+            src="../src/images/Sports/DSC03340.jpg"
+            style="margin-top: -64%; width: 100%; margin-bottom: 66%" />
+          <img
+            src="../src/images/Sports/DSC03348.jpg"
+            style="margin-top: -64%; width: 100%; margin-bottom: 66%" />
+          <img
+            src="../src/images/Sports/DSC03352.jpg"
+            style="margin-top: -64%; width: 100%; margin-bottom: 66%" />
+          <img
+            src="../src/images/Sports/DSC03432.jpg"
+            style="margin-top: -64%; width: 100%; margin-bottom: 66%" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

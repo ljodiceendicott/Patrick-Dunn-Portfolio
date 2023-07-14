@@ -108,15 +108,31 @@
   <body>
     <header>
       <h1>Patrick Dunn</h1>
-      <nav id="nav_menu">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="./pages/photos.html">Photos</a></li>
-          <li><a href="./pages/videos.html">Videos</a></li>
-          <li><a href="./pages/resume.html">Resume</a></li>
-          <li><a href="./pages/taggedphotos.html">Tagged Photos</a></li>
-        </ul>
-      </nav>
+      <div class="nav_menu">
+        <a href="../index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">Photo</button>
+          <div class="dropdown-content">
+            <a href="./pages/photos.html">All Photos</a>
+            <a href="./pages/photoscreativelighting.html">Creative Lighting</a>
+            <a href="./pages/photosnature.html">Nature</a>
+            <a href="./pages/photossports.html">Sports</a>
+            <a href="./pages/photostravel.html">Travel</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" href="photos.html">
+            Videos
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Endicott College</a>
+            <a href="#">Boston University</a>
+          </div>
+        </div>
+        <a href="taggedphotos.html">Tagged Photos</a>
+        <a href="resume.html">Resume</a>
+      </div>
     </header>
     <main>
       <p>
