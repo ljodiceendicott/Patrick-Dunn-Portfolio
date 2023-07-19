@@ -256,6 +256,28 @@ img{
 	padding-top:2%;
   }
 
+  footer{
+	background-color: #13293d;
+	color:#247BA0;
+	font-size: 1em;
+	padding: 5px;
+	text-align: center;
+  }
+  footer p{
+	padding: 2px;
+  }
+	.contact-info {
+		margin-bottom: 10px;
+	}
+	.social-media {
+		margin-top: 10px;
+	}
+	.social-media a {
+		color: #fff;
+		text-decoration: none;
+		margin: 0 10px;
+		font-size: 12px;
+	}
 /* mobile landscape to tablet portrait */
 @media only screen and (max-width: 767px) {
 
